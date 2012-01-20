@@ -1,0 +1,7 @@
+category: TeX
+requires: libgcc1 libhunspell1.3_0 libpoppler-qt4_3 libQtCore4 libQtDBus4 libQtGui4 libQtScript4 libQtScriptTools4 libQtXml4 libstdc++6 texlive zlib0
+sdesc: "TeX document editor with a simple GUI"
+ldesc: "An environment for authoring TeX (LaTeX, ConTeXt, etc) 
+documents, with a Unicode-based, TeX-aware editor, integrated PDF 
+viewer, and a clean, simple interface accessible to casual and 
+non-technical users."
