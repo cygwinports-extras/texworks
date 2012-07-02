@@ -1,4 +1,4 @@
-SVN_REV=858
+SVN_REV=1004
 inherit qt4-qmake
 
 DESCRIPTION="TeX editor and PDF viewer"
