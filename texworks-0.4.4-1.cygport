@@ -1,8 +1,0 @@
-SVN_REV=1004
-inherit qt4-qmake
-
-DESCRIPTION="TeX editor and PDF viewer"
-HOMEPAGE="http://code.google.com/p/texworks/"
-SRC_URI="http://texworks.googlecode.com/files/${P}-r${SVN_REV}.tar.gz"
-
-CYGQMAKE4_ARGS="INSTALL_PREFIX=/usr"

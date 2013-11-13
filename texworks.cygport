@@ -1,0 +1,16 @@
+inherit qt4-qmake
+
+NAME="texworks"
+VERSION=0.4.4
+RELEASE=1
+svn_rev=1004
+CATEGORY="Publishing"
+REQUIRES="texlive-latex-recommended"
+SUMMARY="TeX document editor with a simple GUI"
+DESCRIPTION="An environment for authoring TeX (LaTeX, ConTeXt, etc) documents,
+with a Unicode-based, TeX-aware editor, integrated PDF viewer, and a clean,
+simple interface accessible to casual and non-technical users."
+HOMEPAGE="http://code.google.com/p/texworks/"
+SRC_URI="http://texworks.googlecode.com/files/${NAME}-${VERSION}-r${svn_rev}.tar.gz"
+
+CYGQMAKE4_ARGS="INSTALL_PREFIX=/usr"
