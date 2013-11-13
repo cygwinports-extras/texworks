@@ -1,9 +1,9 @@
 inherit qt4-qmake
 
 NAME="texworks"
-VERSION=0.4.4
+VERSION=0.4.5
 RELEASE=1
-svn_rev=1004
+svn_rev=1281
 CATEGORY="Publishing"
 REQUIRES="texlive-latex-recommended"
 SUMMARY="TeX document editor with a simple GUI"
