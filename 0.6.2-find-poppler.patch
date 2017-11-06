@@ -1,0 +1,26 @@
+--- origsrc/texworks-release-0.6.2/modules/QtPDF/CMake/Modules/FindPoppler.cmake	2017-04-29 11:23:51.000000000 -0500
++++ src/texworks-release-0.6.2/modules/QtPDF/CMake/Modules/FindPoppler.cmake	2017-11-06 13:00:40.653818900 -0600
+@@ -70,14 +70,7 @@ IF ( NOT(POPPLER_BASE_LIBRARIES) )
+ ENDIF ()
+ 
+ # Scan poppler libraries for dependencies on Fontconfig
+-INCLUDE(GetPrerequisites)
+-MARK_AS_ADVANCED(gp_cmd)
+-GET_PREREQUISITES("${POPPLER_BASE_LIBRARIES}" POPPLER_PREREQS TRUE FALSE "" "")
+-IF ("${POPPLER_PREREQS}" MATCHES "fontconfig")
+   SET(POPPLER_NEEDS_FONTCONFIG TRUE)
+-ELSE ()
+-  SET(POPPLER_NEEDS_FONTCONFIG FALSE)
+-ENDIF ()
+ 
+ 
+ FIND_PATH(POPPLER_QT_INCLUDE_DIR NAMES poppler-qt${QT_VERSION_MAJOR}.h poppler-link.h
+@@ -110,7 +103,7 @@ IF ( NOT(POPPLER_QT_LIBRARIES) )
+   MESSAGE(STATUS "Could not find libpoppler-qt${QT_VERSION_MAJOR}." )
+ ENDIF ()
+ 
+-SET(POPPLER_LIBRARIES ${POPPLER_QT_LIBRARIES} ${POPPLER_BASE_LIBRARIES})
++SET(POPPLER_LIBRARIES ${POPPLER_QT_LIBRARIES})
+ 
+ IF ( POPPLER_QT_INCLUDE_DIR AND EXISTS "${POPPLER_QT_INCLUDE_DIR}/../poppler-config.h" )
+   file(STRINGS "${POPPLER_QT_INCLUDE_DIR}/../poppler-config.h" POPPLER_CONFIG_H REGEX "^#define POPPLER_VERSION \"[0-9.]+\"$")

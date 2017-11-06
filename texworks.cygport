@@ -1,16 +1,17 @@
-inherit qt4-qmake
+inherit qt5 cmake
 
 NAME="texworks"
-VERSION=0.4.5
+VERSION=0.6.2
 RELEASE=1
-svn_rev=1281
 CATEGORY="Publishing"
 REQUIRES="texlive-latex-recommended"
 SUMMARY="TeX document editor with a simple GUI"
 DESCRIPTION="An environment for authoring TeX (LaTeX, ConTeXt, etc) documents,
 with a Unicode-based, TeX-aware editor, integrated PDF viewer, and a clean,
 simple interface accessible to casual and non-technical users."
-HOMEPAGE="http://code.google.com/p/texworks/"
-SRC_URI="http://texworks.googlecode.com/files/${NAME}-${VERSION}-r${svn_rev}.tar.gz"
+HOMEPAGE="https://www.tug.org/texworks/"
+SRC_URI="https://github.com/TeXworks/texworks/archive/release-${VERSION}/texworks-release-${VERSION}.tar.gz"
+SRC_DIR="texworks-release-${VERSION}"
+PATCH_URI="0.6.2-find-poppler.patch"
 
-CYGQMAKE4_ARGS="INSTALL_PREFIX=/usr"
+CYGCMAKE_ARGS="-DWITH_LUA=OFF"
